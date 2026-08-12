@@ -14,10 +14,13 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  build:
+  deploy:
+    environment:
+      name: github-pages
+      url: https://aocejogarcia.github.io/SNSP_SONORA
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout with LFS
         uses: actions/checkout@v4
         with:
           lfs: true
@@ -25,18 +28,11 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
-      - name: Upload artifact
+      - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v4
         with:
           path: '.'
+          retention-days: 1
 
-  deploy:
-    needs: build
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
+      - name: Deploy
         uses: actions/deploy-pages@v4
