@@ -22,7 +22,36 @@ h4 {font-size: 18px;}
 h5 {font-size: 16px;}
 h6 {font-size: 12px;}
 code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
-pre:not([class]) { background-color: white }</style>
+pre:not([class]) { background-color: white }
+/* Institutional burgundy palette and official identity strip */
+.hero{background:linear-gradient(120deg,#5B172A,#8B2C4B)}
+.nav{background:#691C32}
+.site-footer{background:#4D1324}
+.govbar{background:#4D1324}
+.eyebrow{color:#D6B77A}
+.portal-card{border-top-color:#691C32}
+.portal-card:nth-child(2){border-top-color:#BC955C}
+.portal-card:nth-child(3){border-top-color:#8B2C4B}
+.resource-list li a:before{color:#BC955C}
+.institutional-logos{display:flex;align-items:center;gap:18px;min-width:0}
+.institutional-logos img{display:block;width:auto;height:auto;object-fit:contain}
+.institutional-logos .logo-snsp{max-width:235px;max-height:68px}
+.institutional-logos .logo-salud{max-width:190px;max-height:58px}
+.institutional-logos .logo-gob{max-width:205px;max-height:62px}
+.logo-divider{width:1px;height:48px;background:#D8C8CD;display:block}
+@media(max-width:900px){
+ .institutional-logos{gap:10px}
+ .institutional-logos .logo-snsp{max-width:180px}
+ .institutional-logos .logo-salud{max-width:145px}
+ .institutional-logos .logo-gob{max-width:155px}
+}
+@media(max-width:650px){
+ .institutional-logos .logo-snsp{max-width:135px}
+ .institutional-logos .logo-salud{max-width:110px}
+ .institutional-logos .logo-gob{max-width:120px}
+ .logo-divider{height:36px}
+}
+</style>
 
 <style type="text/css">.hljs-literal {
 color: #990073;
@@ -125,16 +154,16 @@ display: none;
 <!-- code folding -->
 <style>
 :root{
-  --green-900:#123b2a;
-  --green-800:#174d37;
-  --green-700:#1d6345;
-  --green-600:#2d7a55;
-  --green-100:#eaf4ef;
-  --green-050:#f5faf7;
+  --green-900:#691C32;
+  --green-800:#7A2340;
+  --green-700:#8B2C4B;
+  --green-600:#8B2C4B;
+  --green-100:#F4E8EC;
+  --green-050:#FBF7F8;
   --gold:#b9975b;
-  --ink:#24332c;
-  --muted:#65736c;
-  --line:#dbe5df;
+  --ink:#30252A;
+  --muted:#6F6469;
+  --line:#E4D9DD;
   --white:#fff;
   --shadow:0 12px 32px rgba(18,59,42,.10);
 }
@@ -214,7 +243,7 @@ a:focus-visible{outline:3px solid #d8bd7c;outline-offset:3px}
 .portal-card p{margin:0;color:var(--muted);font-size:.86rem}
 .resource-list{list-style:none;padding:0;margin:16px 0 0;display:grid;gap:10px}
 .resource-list li a{
-  display:block;padding:12px 14px;background:var(--green-050);border:1px solid #e0ece5;
+  display:block;padding:12px 14px;background:var(--green-050);border:1px solid #E8DCE0;
   border-radius:2px;font-weight:650;transition:.18s ease;
 }
 .resource-list li a:hover{background:var(--green-100);transform:translateX(2px);text-decoration:none}
@@ -271,7 +300,13 @@ tbody td:empty:after{content:"—";color:#b1bbb5}
   a{text-decoration:underline;color:#000}
 }
 </style></head>
-<body><div class="govbar"><div class="inner"><span class="govmark">Gobierno de México</span><div class="govlinks"><span>gob.mx</span><span>Trámites</span><span>Gobierno</span></div></div></div><div class="brandbar"><div class="inner"><div class="brand"><div aria-hidden="true" class="brand-symbol">SN</div><div><div class="brand-title">Servicio Nacional de Salud Pública</div><div class="brand-subtitle">Información y herramientas de salud pública · Sonora</div></div></div><div class="utility"><span>Información pública</span><span>•</span><span>Sonora</span></div></div></div><nav aria-label="Navegación principal" class="nav"><div class="inner"><div class="nav-menu"><a href="#inicio">Inicio</a><a href="#inteligencia">Inteligencia</a><a href="#programas">Programas estratégicos</a><a href="#territorio">Operaciones territoriales</a></div></div></nav><main class="main-container" id="inicio"><div class="breadcrumb">Gobierno de México <span>›</span> Salud pública <span>›</span> Sonora</div><section class="hero"><div class="eyebrow">Portal de información</div><h1>Servicio Nacional de Salud Pública en Sonora</h1><p>Acceso centralizado a tableros, mapas, informes y recursos para la vigilancia, los programas estratégicos y la operación territorial.</p></section><section aria-label="Áreas de información" class="portal-grid"><article class="portal-card" id="inteligencia"><h3>Inteligencia</h3><p>Vigilancia epidemiológica, tableros e informes para apoyar la toma de decisiones.</p><ul class="resource-list"><li><a href="./static/MAPA_V3.html">Mapa de dengue para vigilancia</a></li><li><a href="./static/DENGUE_DS.html">Tablero Dengue</a></li><li><a href="./static/FMRR_DS.html">Tablero FMRR</a></li><li><a href="./static/IPAP_DS.html">Tablero Intoxicación por Animal de Ponzoña</a></li><li><a href="./static/DENGUE.html">Informe semanal dengue</a></li><li><a href="./static/FMRR_info2.html">Informe semanal FMRR</a></li><li><a href="./static/IRAGETI.html">Enfermedad Respiratoria Viral</a></li><li><a href="./static/SISVER.html">Resumen COVID e Influenza</a></li></ul></article><article class="portal-card" id="programas"><h3>Programas Estratégicos y Prioridades</h3><p>Mapas y herramientas para el seguimiento de programas prioritarios.</p><ul class="resource-list"><li><a href="./static/MAPA_V4.html">Mapa de Vectores</a></li><li><a href="./static/Vectores/index2.html">Mapas del programa de Vectores por localidad</a></li></ul></article><article class="portal-card" id="territorio"><h3>Operaciones Territoriales y Promoción</h3><p>Recursos orientados al trabajo territorial y la promoción de la salud.</p><ul class="resource-list"><li><a href="./static/desiertos.html">Desiertos</a></li></ul></article></section><div class="section-heading"><div><h2>Directorio de recursos</h2><p>Acceso rápido a las herramientas disponibles</p></div></div><div class="visitor"><span>Este portal ha sido consultado <strong id="visitor-count">Loading...</strong> veces.</span><span aria-hidden="true">Información pública · Sonora</span></div></main><footer class="site-footer"><div class="inner"><div class="footer-top"><div><div class="footer-title">Servicio Nacional de Salud Pública en Sonora</div><div class="footer-note">Portal de información y herramientas de salud pública</div></div><div class="footer-note">Diseño inspirado en el Sistema Nacional de Diseño</div></div><div class="footer-line"></div><div class="footer-meta"><span>Gobierno de México · Sonora</span><span>Accesibilidad · Aviso de privacidad</span></div></div></footer><script>
+<body><div class="govbar"><div class="inner"><span class="govmark">Gobierno de México</span><div class="govlinks"><span>gob.mx</span><span>Trámites</span><span>Gobierno</span></div></div></div><div class="brandbar"><div class="inner"><div class="brand"><div class="institutional-logos" aria-label="Identidad institucional">
+<img class="logo-snsp" alt="Servicio Nacional de Salud Pública" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Servicio_Nacional_de_Salud_P%C3%BAblica_de_M%C3%A9xico.png">
+<span class="logo-divider" aria-hidden="true"></span>
+<img class="logo-salud" alt="Secretaría de Salud" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/SALUD_Logo_%282024%29.png">
+<span class="logo-divider" aria-hidden="true"></span>
+<img class="logo-gob" alt="Gobierno de México" src="https://commons.wikimedia.org/wiki/Special:Redirect/file/Logo_del_Gobierno_de_M%C3%A9xico_%282024-2030%29.png">
+</div></div><div class="utility"><span>Información pública</span><span>•</span><span>Sonora</span></div></div></div><nav aria-label="Navegación principal" class="nav"><div class="inner"><div class="nav-menu"><a href="#inicio">Inicio</a><a href="#inteligencia">Inteligencia</a><a href="#programas">Programas estratégicos</a><a href="#territorio">Operaciones territoriales</a></div></div></nav><main class="main-container" id="inicio"><div class="breadcrumb">Gobierno de México <span>›</span> Salud pública <span>›</span> Sonora</div><section class="hero"><div class="eyebrow">Portal de información</div><h1>Servicio Nacional de Salud Pública en Sonora</h1><p>Acceso centralizado a tableros, mapas, informes y recursos para la vigilancia, los programas estratégicos y la operación territorial.</p></section><section aria-label="Áreas de información" class="portal-grid"><article class="portal-card" id="inteligencia"><h3>Inteligencia</h3><p>Vigilancia epidemiológica, tableros e informes para apoyar la toma de decisiones.</p><ul class="resource-list"><li><a href="./static/MAPA_V3.html">Mapa de dengue para vigilancia</a></li><li><a href="./static/DENGUE_DS.html">Tablero Dengue</a></li><li><a href="./static/FMRR_DS.html">Tablero FMRR</a></li><li><a href="./static/IPAP_DS.html">Tablero Intoxicación por Animal de Ponzoña</a></li><li><a href="./static/DENGUE.html">Informe semanal dengue</a></li><li><a href="./static/FMRR_info2.html">Informe semanal FMRR</a></li><li><a href="./static/IRAGETI.html">Enfermedad Respiratoria Viral</a></li><li><a href="./static/SISVER.html">Resumen COVID e Influenza</a></li></ul></article><article class="portal-card" id="programas"><h3>Programas Estratégicos y Prioridades</h3><p>Mapas y herramientas para el seguimiento de programas prioritarios.</p><ul class="resource-list"><li><a href="./static/MAPA_V4.html">Mapa de Vectores</a></li><li><a href="./static/Vectores/index2.html">Mapas del programa de Vectores por localidad</a></li></ul></article><article class="portal-card" id="territorio"><h3>Operaciones Territoriales y Promoción</h3><p>Recursos orientados al trabajo territorial y la promoción de la salud.</p><ul class="resource-list"><li><a href="./static/desiertos.html">Desiertos</a></li></ul></article></section><div class="section-heading"><div><h2>Directorio de recursos</h2><p>Acceso rápido a las herramientas disponibles</p></div></div><div class="visitor"><span>Este portal ha sido consultado <strong id="visitor-count">Loading...</strong> veces.</span><span aria-hidden="true">Información pública · Sonora</span></div></main><footer class="site-footer"><div class="inner"><div class="footer-top"><div><div class="footer-title">Servicio Nacional de Salud Pública en Sonora</div><div class="footer-note">Portal de información y herramientas de salud pública</div></div><div class="footer-note">Diseño inspirado en el Sistema Nacional de Diseño</div></div><div class="footer-line"></div><div class="footer-meta"><span>Gobierno de México · Sonora</span><span>Accesibilidad · Aviso de privacidad</span></div></div></footer><script>
 fetch('https://api.counterapi.dev/v2/abraham-ocejos-team-3549/snsp_son/up')
   .then(response => response.json())
   .then(data => {
